@@ -17,7 +17,7 @@ public class UserDaoJDBCImpl implements UserDao {
     private static final String SAVE_SQL = "INSERT INTO users (name, last_name, age) VALUES (?, ?, ?)";
     private static final String FINDE_ALL_SQL = "SELECT id, name, last_name, age FROM users";//имена в sql запросе в точности совпадают с именами в таблице
     String sql = "CREATE TABLE IF NOT EXISTS users ("//существует ли уже таблица с таким именем, и только в случае отсутствия таблицы она будет создана.
-            + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + "id INTEGER PRIMARY KEY AUTO_INCREMENT, "
             + "name VARCHAR(50) NOT NULL, "
             + "last_name VARCHAR(50) NOT NULL, "
             + "age INTEGER NOT NULL)";
